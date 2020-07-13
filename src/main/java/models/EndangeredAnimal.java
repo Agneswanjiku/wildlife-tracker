@@ -1,5 +1,5 @@
 package models;
-class endangeredAnimal extends Animals {
+class EndangeredAnimal extends Animals {
     private String health;
     private String age;
     private String type;
@@ -7,7 +7,7 @@ class endangeredAnimal extends Animals {
     public static final String ANIMAL_TYPE = "Endangered";
 
 
-    public endangeredAnimal(String name, String health, String age) {
+    public EndangeredAnimal(String name, String health, String age) {
         super(name);
         if (name.equals("") || health.equals("") || age.equals("")) {
             throw new IllegalArgumentException("Please input all fields as required");

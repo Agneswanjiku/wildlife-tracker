@@ -14,23 +14,26 @@ public class Animals {
         this.name = name;
 
         this.type = ANIMAL_TYPE;
-
+        this.id = id;
 
     }
 
 
 
 public String getName() {
-    return name;
+
+        return name;
 }
 
     public int getId() {
+
         return id;
     }
 
 
 
     public String getType() {
+
         return type;
     }
 

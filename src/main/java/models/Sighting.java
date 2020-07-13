@@ -1,6 +1,7 @@
 package models;
 
 import java.sql.Timestamp;
+import java.util.Objects;
 
 public class Sighting {
     private String location;
@@ -17,11 +18,13 @@ public class Sighting {
         this.name = name;
         this.animalId = animalId;
         this.type = type;
-    }  public Timestamp getTime_sighted() {
+    }
+
+    public Timestamp getTime_sighted() {
         return time_sighted;
     }
 
-    public Sighting(String name, String location, int animalId, String type, String age, String health){
+    public Sighting(String name, String location, int animalId, String type, String age, String health) {
         this.location = location;
         this.name = name;
         this.animalId = animalId;
@@ -30,4 +33,15 @@ public class Sighting {
         this.health = health;
     }
 
+
+
+
+    @Override
+    public boolean equals(Object otherSighting) {
+        if (this == otherSighting) return true;
+        if (otherSighting == null || getClass() != otherSighting.getClass()) return false;
+        Sighting sighting = (Sighting) otherSighting;
+        return Objects.equals(location, sighting.location) &&
+                Objects.equals(name, sighting.name);
+    }
 }
