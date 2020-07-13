@@ -6,6 +6,7 @@ public class Animals {
 
     public String type;    public static final String ANIMAL_TYPE = "Common";
 
+
     public Animals(String name){
         if(name.equals("")){
             throw new IllegalArgumentException("Please enter an animal name.");
@@ -18,4 +19,23 @@ public class Animals {
     }
 
 
+
+public String getName() {
+    return name;
 }
+
+    public int getId() {
+        return id;
+    }
+
+
+
+    public String getType() {
+        return type;
+    }
+
+
+
+}
+
+
