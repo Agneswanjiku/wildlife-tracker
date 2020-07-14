@@ -1,0 +1,61 @@
+{{#partial "content"}}
+    {{#if animals}}
+        <div class="container">
+            <div class="row">
+                <h3>Available Animals</h3>
+                <div class="container">
+                    <div class="card text-primary border-primary text-center" style=" height:auto" id="landingCard">
+                        <div class="card-body">
+                            <h3 class="card-title intro">Record sightings</h3>
+                            <table class="table table-dark">
+                                <tbody>
+                                <ul class="intro"style="font-size:15px">
+                                    <li>Sighting No.</li>
+                                    <li>Ranger Name</li>
+                                    <li>Location</li>
+                                    <li>Animal Name</li>
+                                    <li>Animal Type</li>
+                                    <li>Health</li>
+                                    <li>Age</li>
+                                    <li>Time recorded</li>
+                                </ul>
+                                {{#each sightings}}
+                                    <ul>
+                                        <li><span></span>{{id}}</li>
+                                        <li>  <span></span>{{name}}</li>
+                                        <li>  <span></span>{{location}}</li>
+                                        <li>  <span></span>{{animalid}}</li>
+                                        <li> <span></span>{{type}}</li>
+                                        <li> <span></span>{{health}}</li>
+                                        <li> <span></span>{{age}}</li>
+                                        <li>  <span></span>{{time_sighted}}</li>
+
+                                    </ul>
+
+                                {{/each}}
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+    {{/if}}
+
+
+
+
+
+
+{{/partial}}
