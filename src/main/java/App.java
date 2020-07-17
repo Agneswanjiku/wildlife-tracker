@@ -1,8 +1,12 @@
+import models.*;
 import spark.ModelAndView;
+import spark.Request;
+import spark.Response;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 import static spark.Spark.*;
 
@@ -36,17 +40,7 @@ public class App {
             return new ModelAndView(model,"Sightingform.hbs");
         },new HandlebarsTemplateEngine());
 
-//        post("/new/sighting",(req,res)->{
-//            Map<String,Object>model = new HashMap<>();
-//            String rangerName = req.queryParams("rangerName");
-//            String location = req.queryParams("locationName");
-//            int animalId = Integer.parseInt(req.queryParams("animalId"));
-//            String type = Animals.find(animalId).getType();
-//            Sighting newSighting =  new Sighting(rangerName,location,animalId,type);
-//            newSighting.save();
-//            res.redirect("/sightings");
-//            return null;
-//        }, new HandlebarsTemplateEngine());
+        post("/new/sighting", App::handle, new HandlebarsTemplateEngine());
 
 
         get("/new/endangered",(req,res)->{
@@ -108,23 +102,26 @@ public class App {
 
 
 
-        get("/rangers",(req,res)->{
+        get("/Rangers",(req,res)->{
             Map<String,Object>model = new HashMap<>();
-            model.put("rangers",Ranger.all());
+            model.put("Rangers",Ranger.all());
             return new ModelAndView(model,"Rangers.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/locations",(req,res)->{
+        get("/Locations",(req,res)->{
             Map<String,Object>model = new HashMap<>();
-            model.put("locations",Location.all());
+            model.put("Locations", Location.all());
             return new ModelAndView(model,"locationList.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/animals",(req,res)->{
             Map<String,Object>model = new HashMap<>();
-            model.put("animals",Animals.all());
+            model.put("animals", Animals.all());
             return new ModelAndView(model,"AnimalDetails.hbs");
         }, new HandlebarsTemplateEngine());
+
+
+
 
 
         get("/endangeredAnimals",(req,res)->{
@@ -135,7 +132,8 @@ public class App {
 
         get("/sightings",(req,res)->{
             Map<String,Object>model = new HashMap<>();
-            model.put("sightings",Sighting.all());
+            Properties thirdSighting = null;
+//            model.put("sightings",Sighting.all(thirdSighting.save(2)));
             return new ModelAndView(model,"SightingDetails.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -143,4 +141,15 @@ public class App {
     }
 
 
+    private static ModelAndView handle(Request req, Response res) {
+        Map<String, Object> model = new HashMap<>();
+        String rangerName = req.queryParams("rangerName");
+        String location = req.queryParams("locationName");
+        int animalId = Integer.parseInt(req.queryParams("animalId"));
+//        String type = models.Animals.find(animalId).getType();
+        Sighting newSighting = new Sighting(rangerName, location, animalId);
+        newSighting.save();
+        res.redirect("/sightings");
+        return null;
+    }
 }

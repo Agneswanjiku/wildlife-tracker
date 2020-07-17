@@ -8,7 +8,7 @@
                     <h2 class="title">Endangered Sighting</h2>
                     <form action="/new/endangered" method="POST">
                         <div class="input-group">
-                            <label for="rangerName">Ranger Name</label>
+                            <label for="rangerName">models.Ranger Name</label>
                             <select class="form-control" id="rangerName" name="rangerName">
                                 {{#each rangers}}
                                     <option  value="{{name}}">{{name}}</option>
@@ -16,7 +16,7 @@
                             </select>
                         </div>
                         <div class="input-group">
-                            <label for="rangerName">Location Name</label>
+                            <label for="rangerName">models.Location Name</label>
                             <select class="form-control" id="locationName" name="locationName">
                                 {{#each locations}}
                                     <option  value="{{name}}">{{name}}</option>
@@ -59,3 +59,4 @@
 
 
 {{/partial}}
+{{> layout.hbs}}

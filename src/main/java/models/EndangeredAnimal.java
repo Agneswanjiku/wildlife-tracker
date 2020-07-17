@@ -1,8 +1,10 @@
+package models;
+
 import java.util.List;
 
 import org.sql2o.*;
 
-class EndangeredAnimal extends Animals {
+public class EndangeredAnimal extends Animals {
     private String health;
     private String age;
     private String type;
@@ -35,7 +37,8 @@ class EndangeredAnimal extends Animals {
 
 
 
-    public void save(){
+    @Override
+    public Object save(){
         try(Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO endangered_animals (name,type,health,age) VALUES (:name,:type,:health,:age)";
             this.id = (int) con.createQuery(sql,true)
@@ -49,6 +52,7 @@ class EndangeredAnimal extends Animals {
 
 
         }
+        return null;
     }
 
     public static List<EndangeredAnimal> getAll() {
@@ -67,7 +71,4 @@ class EndangeredAnimal extends Animals {
         return health;
     }
 
-//    public String getName() {
-//        return name;
-//    }
 }
