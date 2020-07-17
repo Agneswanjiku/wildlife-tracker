@@ -1,6 +1,7 @@
 # wildlife-tracker
 This application allows the user to add a sighting for either a common or endangered animal and view the sightings. One can also add a new animal and view the animals.
 
+![Screenshot from 2020-07-17 15-58-16](https://user-images.githubusercontent.com/63198747/87788700-77b77880-c846-11ea-90e2-52bccf2699ed.png)
 
 
 <br>User Requirements<br>
