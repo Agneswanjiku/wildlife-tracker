@@ -21,3 +21,6 @@ Run these commands<br>
 5. CREATE TABLE animals (id serial PRIMARY KEY, name varchar,);<br>
 6. CREATE TABLE wildlife_tracker=# CREATE TABLE sightings (id serial PRIMARY KEY, animal_id int, location varchar, ranger_name varchar, timestamp timestamp);<br>
 7. CREATE DATABASE wildlife_tracker_test WITH TEMPLATE wildlife_tracker;<br>
+
+sighting image
+![Screenshot from 2020-07-21 10-57-13](https://user-images.githubusercontent.com/63198747/88028285-1c84cf00-cb41-11ea-9038-6d7ca62b0eec.png)
