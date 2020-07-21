@@ -6,7 +6,7 @@ image of animal form
 
 ![Screenshot from 2020-07-21 10-45-50](https://user-images.githubusercontent.com/63198747/88027063-708eb400-cb3f-11ea-9b25-754c45eb4d6f.png)
 
-image of endAngered form
+image of endangered form
 ![Screenshot from 2020-07-21 10-48-41](https://user-images.githubusercontent.com/63198747/88027376-d3804b00-cb3f-11ea-9d45-e488a1177ff7.png)
 
 
