@@ -42,6 +42,13 @@ Java - The language used Intellij Idea - Intergated development Spark - Framewor
 Contributing<br>
 If you want to put out a pull request you first have to send us the sample code that you want to add to our repository for cross-checking before we allow the pull.<br>
 
+Versioning<br>
+We use Github for versioning. This is the first version of this application<br>
+
+License This project is licensed under the MIT License - see the LICENSE file for details<br>
+
+Acknowledgments Hat tip to Stackoverflow<br>
+
 
 
 
