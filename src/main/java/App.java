@@ -120,6 +120,17 @@ public class App {
             return new ModelAndView(model,"AnimalDetails.hbs");
         }, new HandlebarsTemplateEngine());
 
+        post("/new/endangeredAnimal",(req,res)->{
+            Map<String, Object> model = new HashMap<>();
+            String animalName = req.queryParams("animalName");
+            String health = req.queryParams("health");
+            String age = req.queryParams("age");
+            EndangeredAnimal animal = new EndangeredAnimal(animalName,health,age);
+            animal.save();
+            res.redirect("/locationList.hbs");
+            return null;
+
+        },new HandlebarsTemplateEngine());
 
 
 

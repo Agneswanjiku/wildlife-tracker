@@ -1,6 +1,6 @@
  body{
 color: white;
-background: url('/images/lionWall.jpg'), rgba(0,0,0,.7);
+background: url('https://r.ddmcdn.com/s_f/o_1/cx_297/cy_0/cw_1201/ch_1201/w_720/APL/uploads/2014/08/wild-animal-safari-zebra-5371037.jpg'), rgba(0,0,0,.7);
 background-repeat: no-repeat;
 background-size:cover;
 background-position: center-center;
@@ -227,7 +227,7 @@ input {
 }
 
 .card-3 .card-heading {
-  background: url("/images/sighting.jpeg") top left/cover no-repeat;
+  background: url("https://r.ddmcdn.com/s_f/o_1/cx_297/cy_0/cw_1201/ch_1201/w_720/APL/uploads/2014/08/wild-animal-safari-zebra-5371037.jpg") top left/cover no-repeat;
   background-position : center;
   display: table-cell;
   width: 50%;
