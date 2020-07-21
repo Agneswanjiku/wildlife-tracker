@@ -9,6 +9,10 @@ image of animal form
 image of endAngered form
 ![Screenshot from 2020-07-21 10-48-41](https://user-images.githubusercontent.com/63198747/88027376-d3804b00-cb3f-11ea-9d45-e488a1177ff7.png)
 
+
+sighting image
+![Screenshot from 2020-07-21 10-57-13](https://user-images.githubusercontent.com/63198747/88028285-1c84cf00-cb41-11ea-9038-6d7ca62b0eec.png)
+
 <BR>SQL<BR>
   
   
@@ -22,8 +26,6 @@ Run these commands<br>
 6. CREATE TABLE wildlife_tracker=# CREATE TABLE sightings (id serial PRIMARY KEY, animal_id int, location varchar, ranger_name varchar, timestamp timestamp);<br>
 7. CREATE DATABASE wildlife_tracker_test WITH TEMPLATE wildlife_tracker;<br>
 
-sighting image
-![Screenshot from 2020-07-21 10-57-13](https://user-images.githubusercontent.com/63198747/88028285-1c84cf00-cb41-11ea-9038-6d7ca62b0eec.png)
 
 <br>contact details<br>
 shikonorman@gmail.com<br>
