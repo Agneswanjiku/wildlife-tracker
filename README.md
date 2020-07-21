@@ -32,4 +32,18 @@ or<br>
 
 0797089772
 
+Technology used<br>
+i used pure java to create the app.
+
+
+Built With<br>
+Java - The language used Intellij Idea - Intergated development Spark - Framework<br>
+
+Contributing<br>
+If you want to put out a pull request you first have to send us the sample code that you want to add to our repository for cross-checking before we allow the pull.<br>
+
+
+
+
+
 
